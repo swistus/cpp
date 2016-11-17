@@ -19,14 +19,13 @@ int main()
     cout<<"ten hetman atakuje "<<pola(x,y,n)<<" pol"<<endl;
 }
 
-
 int pola(int x,int y,int n)
 {
     int p=n*2-2;
     p+=n-abs(x-y)-1;
     y=n-y;
     p+=n-abs(x-y)-1;
-    return p;
+    return p-1;
 }
 int polozenie(int n, string nazwa)
 {
