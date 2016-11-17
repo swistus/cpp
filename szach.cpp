@@ -2,10 +2,43 @@
 
 using namespace std;
 
+int polozenie(int n, string nazwa);
+int pola(int x,int y,int n);
+int wymiar();
+
 int main()
 {
     int n,x,y;
-    do
+    n=wymiar();
+    int szachow [n][n];
+    x=polozenie(n,"x");
+    y=polozenie(n,"y");
+    cout<<"ten hetman atakuje"<<pola(x,y,n)<<"pol"<<endl;
+}
+
+
+int pola(int x,int y,int n)
+{
+
+}
+int polozenie(int n, string nazwa)
+{
+        int a;
+        cout<<"podaj wspolzendna "<<nazwa<<" figury"<<endl;
+        do
+    {
+        cin>>a;
+        if (a>n)
+        {
+            cout<<"podaj poprawna wspolzendna "<<nazwa<<endl;
+        }
+    }while(a>n);
+    return a;
+}
+int wymiar()
+{
+    int n;
+        do
     {
         cout<<"padaj wymiar szachownicy"<<endl;
         cin>>n;
@@ -15,23 +48,5 @@ int main()
             return 0;
         }
     }while(n>50);
-    int szachow [n][n];
-    cout<<"podaj wspolzendna x figury"<<endl;
-    do
-    {
-        cin>>x;
-        if (x>n)
-        {
-            cout<<"podaj poprawna wspolzendna x"<<endl;
-        }
-    }while(x>n);
-        cout<<"podaj wspolzendna y figury"<<endl;
-    do
-    {
-        cin>>y;
-        if (y>n)
-        {
-            cout<<"podaj poprawna wspolzendna y"<<endl;
-        }
-    }while(y>n);
+    return n;
 }
