@@ -16,14 +16,22 @@ int main()
         }
     }while(n>50);
     int szachow [n][n];
-    cout<<"podaj wspolzendne figury"<<endl;
+    cout<<"podaj wspolzendna x figury"<<endl;
     do
     {
-        cin>>x,y;
-        if (x>n||y>n)
+        cin>>x;
+        if (x>n)
         {
-            cout<<"podaj poprawne wspolzendne"<<endl;
+            cout<<"podaj poprawna wspolzendna x"<<endl;
         }
-    }while(x>n||y>n);
-
+    }while(x>n);
+        cout<<"podaj wspolzendna y figury"<<endl;
+    do
+    {
+        cin>>y;
+        if (y>n)
+        {
+            cout<<"podaj poprawna wspolzendna y"<<endl;
+        }
+    }while(y>n);
 }
