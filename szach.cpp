@@ -1,4 +1,7 @@
 #include <iostream>
+#include <cstdio>
+#include <cstdlib>
+#include <cmath>
 
 using namespace std;
 
@@ -13,13 +16,17 @@ int main()
     int szachow [n][n];
     x=polozenie(n,"x");
     y=polozenie(n,"y");
-    cout<<"ten hetman atakuje"<<pola(x,y,n)<<"pol"<<endl;
+    cout<<"ten hetman atakuje "<<pola(x,y,n)<<" pol"<<endl;
 }
 
 
 int pola(int x,int y,int n)
 {
-
+    int p=n*2-2;
+    p+=n-abs(x-y)-1;
+    y=n-y;
+    p+=n-abs(x-y)-1;
+    return p;
 }
 int polozenie(int n, string nazwa)
 {
