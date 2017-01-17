@@ -54,5 +54,5 @@ int main()
         }
     }
     plik.close();
-    cout<<ilosc;
+    cout<<"w podanym pliku znajduje sie: "<<ilosc<<" anagramow"<<endl;
 }
