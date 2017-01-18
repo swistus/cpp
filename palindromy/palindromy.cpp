@@ -7,8 +7,9 @@ int main()
     plik.open("palindromy.txt",ios::in);
     int ilosc=0;
     string wyraz;
-    while (getline(plik,wyraz))
+    while(!plik.eof())
     {
+        plik>>wyraz;
         bool palindrom=true;
         for (int i=(wyraz.length()-2)/2;i>=0;i--)
         {
@@ -23,5 +24,5 @@ int main()
         }
     }
     plik.close();
-    cout<<"tekst zawiera "<<ilosc<<" palindromy"<<endl;
+    cout<<"tekst zawiera "<<ilosc<<" palindromow"<<endl;
 }
