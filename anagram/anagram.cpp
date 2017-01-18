@@ -7,7 +7,7 @@ int main()
     fstream plik;
     plik.open("anagram.txt",ios::in);
     int ilosc=0;
-    while (plik.good())
+    while(!plik.eof())
     {
         string wyraz[5];
         int il [5];
