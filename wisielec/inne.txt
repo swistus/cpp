@@ -1,0 +1,10 @@
+portwel
+kalkulator
+kompas
+telefon
+zeszyt
+kubek
+aparat
+latarka
+kartka
+gitara
